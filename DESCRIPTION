@@ -1,0 +1,12 @@
+Package: SPSStoR
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Daria Omelchenko
+Maintainer: The package maintainer <daria.omelchenko@mail.ru>
+Description: This package is aimed to facilitate the analysis of sociological data, stored in .sav files and create plot by means of DatawRappr package.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Depends: rJava, xlsx, sjlabelled, tidyverse, questionr, DatawRappr, magick
+RoxygenNote: 7.3.1
