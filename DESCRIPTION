@@ -10,3 +10,5 @@ Encoding: UTF-8
 LazyData: true
 Depends: rJava, xlsx, sjlabelled, tidyverse, questionr, DatawRappr, magick
 RoxygenNote: 7.3.1
+URL: https://github.com/domelia/SPSStoR
+BugReports: https://github.com/domelia/SPSStoR/issues
