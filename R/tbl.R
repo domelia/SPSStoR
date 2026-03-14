@@ -27,5 +27,6 @@ tbl<-function(df, var, factor=NULL, chi=F){
     df[[factor]]<-sjlabelled::as_label(df[[factor]])
     chisq.test(df[[var]], df[[factor]])
   }
+  tab<-as.data.frame(tab)
   tab
 }

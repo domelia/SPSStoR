@@ -13,7 +13,7 @@ uni_multi<-function(df, q, sort=F, excel=F){
     select_if(is.numeric)
   labs<-set %>%sjlabelled::get_label()
   labs<-as_tibble(labs)
-  tab<-multi.table(set, freq = T)
+  tab<-multi.table(set, freq = T, digits = 2)
   tab<-as_tibble(tab)
   tab<-tab %>%
     select(-n) |>

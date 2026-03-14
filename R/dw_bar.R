@@ -17,14 +17,6 @@ dw_bar<-function(tab, type="split", mirror=T, colors=c("#003f5c", "#fa8c00"), sa
     plot="d3-bars-grouped"
     color_key=T
   }
-  if(type=="donut"){
-    plot="d3-donuts"
-    color_key=T
-  }
-  if(type=="pie"){
-    plot="d3-pies"
-    color_key=T
-  }
 
   mirror=mirror
   new_chart_dw<-dw_create_chart()
