@@ -27,7 +27,7 @@ dw_pie<-function(tab, type="pie", colors=c("#003f5c", "#fa8c00"),  save=T){
   new_chart_dw<-dw_create_chart()
   id<-new_chart_dw$id
   dw_data_to_chart(tab, id)
-  dw_edit_chart(chart_id = id,  type=plot, language="ru-RU", visualize=list("value-label-format"="0.0", "small_multiples"=list("enabled"=T), "background"=F, "slice_order"="original","inside_labels"= list("enabled"=F), "outside_labels"=list("enabled"=T), "show-color-key"=color_key, "mirror-bars"=mirror, "custom-colors"=cat_col, "color-category"=cat_col), publish=list("embed-width"=400))
+  dw_edit_chart(chart_id = id,  type=plot, language="ru-RU", visualize=list("value-label-format"="0.0", "small_multiples"=list("enabled"=T), "background"=F, "slice_order"="original","inside_labels"= list("enabled"=F), "outside_labels"=list("enabled"=T), "show-color-key"=color_key, "custom-colors"=cat_col, "color-category"=cat_col), publish=list("embed-width"=400))
   id_print<-dw_export_chart(id)
   if(save==T){
     image_write(id_print, path = paste0(id, ".png"), format = "png")
