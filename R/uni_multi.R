@@ -17,14 +17,14 @@ uni_multi<-function(df, q, sort=F, excel=F){
   tab<-as_tibble(tab)
   tab<-tab %>%
     select(-n) |>
-    rename(`%`=`%multi`) |>
-    mutate(Показатель=labs$value) |>
-    relocate(Показатель) |>
-    filter(`%`!=0)
+    rename(Freq=`%multi`) |>
+    mutate(Var1=labs$value) |>
+    relocate(Var1) |>
+    filter(Freq!=0)
 
   if (sort==T){
     tab<-tab %>%
-      arrange(desc(`%`))
+      arrange(desc(Freq))
   }
   if(excel==T){
     xlsx::write.xlsx(tab, paste0(q,".xlsx"))
