@@ -8,7 +8,7 @@
 #' @param chi Optional. When TRUE chi-squared test is applied to test hypothesis about independence of var and factor.
 #' @return Function returns table or crosstable, and optionnaly, ch-squared statistics.
 
-tbl<-function(df, var, factor=NULL, chi=F){
+tbl<-function(df, var, factor=NULL, chi=F, sort=F){
   df[[var]]<-sjlabelled::as_label(df[[var]])
   tab <- round(prop.table(table(df[[var]]))*100,1)
 
@@ -26,6 +26,11 @@ tbl<-function(df, var, factor=NULL, chi=F){
   if(chi==T){
     df[[factor]]<-sjlabelled::as_label(df[[factor]])
     chisq.test(df[[var]], df[[factor]])
+  }
+
+  if(sort==T){
+    tab<-tab |>
+      arrange(desc(tab[,2]))
   }
   tab<-as.data.frame(tab)
   tab
