@@ -10,7 +10,7 @@ bar_plot1<-function(data, fill_colors = colors, label_width=50){
         label = scales::number(.data$Freq, accuracy = 0.1, decimal.mark = ","),
         hjust = -0.3, colour = Var1, size = 5, fontface = "bold"
       ))+
-      expand_limits(y=c(0,75))+
+      expand_limits(y=c(0, 100))+
       coord_flip(clip = "off")+
       theme_void()+
       theme(

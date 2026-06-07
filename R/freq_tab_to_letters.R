@@ -11,7 +11,7 @@
 #' @param df A data.frame containing the grouping variable and the
 #'   multiple-response indicator variables (0/1).
 #' @param group_var Name of the grouping variable (character scalar),
-#'   e.g. \code{"sex"} or \code{"age_cats8"}.
+#'   e.g. \code{"sex"}.
 #' @param q_prefix Character prefix common to the multiple-response
 #'   items, e.g. \code{"B14_"}.
 #' @param alpha Significance level used to define differences between
